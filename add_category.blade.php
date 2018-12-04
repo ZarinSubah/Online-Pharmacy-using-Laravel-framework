@@ -18,6 +18,14 @@
 						<h2><i class="halflings-icon edit"></i><span class="break"></span>Add Category</h2>
 						
 					</div>
+					<?php
+						$message=Session::get('message');
+						if($message)
+						{
+                           echo $message;
+                           Session::put('message');
+						}
+						?>
 					<div class="box-content">
 						<form class="form-horizontal" action="{{url('/save-category')}}" method="post">
 							{{csrf_field()}}
