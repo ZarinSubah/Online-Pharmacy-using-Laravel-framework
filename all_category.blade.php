@@ -21,38 +21,21 @@
 								  <th>Category ID</th>
 								  <th>Category Name</th>
 								  <th>Category Description</th>
-								  <th>Status</th>
-								  <th>Actions</th>
+					              <th>Actions</th>
 							  </tr>
 						  </thead>  
 						  @foreach($all_category_info as $v_category) 
 						  <tbody>
 							<tr>
+								
 								<td>{{$v_category->category_id}}</td>
 								<td class="center">{{$v_category->category_name}}</td>
 								<td class="center">{{$v_category->category_description}}</td>
 								
-								<td class="center">
-									@if($v_category->publication_status==1)
-									<span class="label label-success">Active</span>
-									@else
-									<span class="label label-success">Unactive</span>
-									@endif
-								</td>
-
-								<td class="center">
-
-
-
-									@if($v_category->publication_status==1)
-									<a class="btn btn-danger" href="#">
-										<i class="halflings-icon white thumbs-down"></i>  
-									</a>
-									@else
-									<a class="btn btn-success" href="#">
+					                <td class="center">
+                                    <a class="btn btn-danger" href="#">
 										<i class="halflings-icon white thumbs-up"></i>  
 									</a>
-									@endif
 									<a class="btn btn-info" href="#">
 										<i class="halflings-icon white edit"></i>  
 									</a>
@@ -61,16 +44,22 @@
 									</a>
 								</td>
 							</tr>
-							
-							
-							
-						  </tbody>
-						  @endforech
+							</tbody>
+						  @endforeach
 					  </table>            
 					</div>
 				</div><!--/span-->
 			
 			</div><!--/row-->
+@endsection	
+									
+							
+							
 
 
-@endsection
+									
+						            
+							
+						  
+
+								

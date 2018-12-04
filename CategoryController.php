@@ -36,15 +36,14 @@ class CategoryController extends Controller
         $data['category_id']=$request->category_id;
         $data['category_name']=$request->category_name;
         $data['category_description']=$request->category_description;
-        $data['publication_status']=$request->publication_status;
-
-        //echo "<pre>";
-        //print_r($data);
-        //echo "</pre>";
+        
         DB::table('tbl_category')->insert($data);
         Session::put('message','Category added successfully');
         return Redirect::to('/add-category');
 
+
+  
+        
 
     }
 
