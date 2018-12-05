@@ -38,3 +38,5 @@ Route::post('/update-category/{category_id}','CategoryController@update_category
 Route::get('/delete-category/{category_id}','CategoryController@delete_category'); //calls delete category function
 
 
+//Product controllers are below
+Route::get('/add-product/','ProductController@index');
