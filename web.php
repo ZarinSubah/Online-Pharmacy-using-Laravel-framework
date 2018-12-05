@@ -26,7 +26,6 @@ Route::get('/','HomeController@index');
 
 //backend routes.......................
 Route::get('/admin','AdminController@index');
-Route::get('/dashboard','AdminController@show_dashboard');
 Route::post('/admin-dashboard','AdminController@dashboard');
 Route::get('/logout','SuperAdminController@logout'); 
 
@@ -35,5 +34,7 @@ Route::get('/add-category','CategoryController@index');
 Route::get('/all-category','CategoryController@all_category'); 
 Route::post('/save-category','CategoryController@save_category'); 
 Route::get('/edit-category/{category_id}','CategoryController@edit_category'); 
+Route::post('/update-category/{category_id}','CategoryController@update_category'); //updates category according to the category id
+Route::get('/delete-category/{category_id}','CategoryController@delete_category'); //calls delete category function
 
 

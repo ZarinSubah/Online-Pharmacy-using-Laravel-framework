@@ -15,19 +15,12 @@
 			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon edit"></i><span class="break"></span>Add Category</h2>
+						<h2><i class="halflings-icon edit"></i><span class="break"></span>Update Category</h2>
 						
 					</div>
-					<?php
-						$message=Session::get('message');
-						if($message)
-						{
-                           echo $message;
-                           Session::put('message');
-						}
-						?>
+					  	
 					<div class="box-content">
-						<form class="form-horizontal" action="{{url('/update-category')}}" method="post">
+						<form class="form-horizontal" action="{{url('/update-category',$category_info->category_id)}}" method="post">
 							{{csrf_field()}}
 						  <fieldset>
 					
@@ -35,20 +28,20 @@
 							<div class="control-group">
 							  <label class="control-label" for="date01">Category Name</label>
 							  <div class="controls">
-								<input type="text" class="input-xlarge" name="category_name">
+								<input type="text" class="input-xlarge" name="category_name" value="{{$category_info->category_name}}">
 							  </div>
 							</div>
 
 					
 						         
 							<div class="control-group hidden-phone">
-							  <label class="control-label" for="textarea2">category description </label>
+							  <label class="control-label" for="textarea2">Category Description </label>
 							  <div class="controls">
-								<textarea class="cleditor" name="category description" rows="3"></textarea>
+								<textarea class="cleditor" name="category description" rows="3">{{$category_info->category_description}}</textarea>
 							  </div>
 							
 							<div class="form-actions">
-							  <button type="submit" class="btn btn-primary">Update Category</button>
+							  <button type="submit" class="btn btn-primary">save</button>
 							  
 							</div>
 						  </fieldset>

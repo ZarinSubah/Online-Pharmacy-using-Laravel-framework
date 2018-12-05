@@ -9,6 +9,18 @@
 				<li><a href="#">Tables</a></li>
 			</ul>
 
+			<p class="alert-success">
+				<?php
+				$message=Session::get('message');
+				if($message)
+				{
+					echo $message;
+					Session::put ('message',null);
+				}
+
+
+				?>
+
 			<div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="box-header" data-original-title>
@@ -37,7 +49,7 @@
 									<a class="btn btn-info" href="{{URL::to('/edit-category/'.$v_category->category_id)}}">
 										<i class="halflings-icon white edit"></i>  
 									</a>
-									<a class="btn btn-danger" href="">
+									<a class="btn btn-danger" href="{{URL::to('/delete-category/'.$v_category->category_id)}}">
 										<i class="halflings-icon white trash"></i> 
 									</a>
 								</td>
