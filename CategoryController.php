@@ -46,5 +46,20 @@ class CategoryController extends Controller
         
 
     }
+     public function edit_category($category_id)
+    {
+        
+      $category_info=DB::table('tbl_category')
+
+       ->where('category_id',$category_id)
+       ->first();
+
+  
+      $category_info=view('admin.edit_category')
+      ->with('category_info',$category_info);
+      return view('admin_layout')
+      ->with('admin.edit_category',$category_info);
+        //return view('admin.edit_category');
+    }
 
 }

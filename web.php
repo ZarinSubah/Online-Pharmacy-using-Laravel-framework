@@ -34,4 +34,6 @@ Route::get('/logout','SuperAdminController@logout');
 Route::get('/add-category','CategoryController@index'); 
 Route::get('/all-category','CategoryController@all_category'); 
 Route::post('/save-category','CategoryController@save_category'); 
+Route::get('/edit-category/{category_id}','CategoryController@edit_category'); 
+
 

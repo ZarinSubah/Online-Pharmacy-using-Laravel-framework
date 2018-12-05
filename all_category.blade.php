@@ -33,13 +33,11 @@
 								<td class="center">{{$v_category->category_description}}</td>
 								
 					                <td class="center">
-                                    <a class="btn btn-danger" href="#">
-										<i class="halflings-icon white thumbs-up"></i>  
-									</a>
-									<a class="btn btn-info" href="#">
+                             
+									<a class="btn btn-info" href="{{URL::to('/edit-category/'.$v_category->category_id)}}">
 										<i class="halflings-icon white edit"></i>  
 									</a>
-									<a class="btn btn-danger" href="#">
+									<a class="btn btn-danger" href="">
 										<i class="halflings-icon white trash"></i> 
 									</a>
 								</td>
