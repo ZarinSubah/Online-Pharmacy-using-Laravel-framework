@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,23 +11,10 @@
 */
 //frontend site...........
 Route::get('/','HomeController@index');
-
-
-
-
-
-
-
-
-
-
-
-
 //backend routes.......................
 Route::get('/admin','AdminController@index');
 Route::post('/admin-dashboard','AdminController@dashboard');
 Route::get('/logout','SuperAdminController@logout'); 
-
 //category related routes
 Route::get('/add-category','CategoryController@index'); 
 Route::get('/all-category','CategoryController@all_category'); 
@@ -37,6 +23,7 @@ Route::get('/edit-category/{category_id}','CategoryController@edit_category');
 Route::post('/update-category/{category_id}','CategoryController@update_category'); //updates category according to the category id
 Route::get('/delete-category/{category_id}','CategoryController@delete_category'); //calls delete category function
 
+//manufacture or brands routes are here
 
-//Product controllers are below
-Route::get('/add-product/','ProductController@index');
+Route::get('/add-manufacture','ManufactureController@index');
+Route::post('/save-manufacture','ManufactureController@save_manufacture');
