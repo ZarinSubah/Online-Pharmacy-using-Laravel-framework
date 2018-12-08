@@ -11,11 +11,11 @@ class ManufactureController extends Controller
 {
     public function index()
     {
-        return view('admin.add_manufacture');
+      return view('admin.add_manufacture');
     }
     public function save_manufacture(Request $request)
     {
-        $data=array();
+      $data=array();
         $data['manufacture_id']=$request->manufacture_id;
         $data['manufacture_name']=$request->manufacture_name;
         $data['manufacture_description']=$request->manufacture_description;
@@ -59,5 +59,20 @@ public function edit_manufacture($manufacture_id)
      
         //return view('admin.edit_category');
     }
+
+// save edited information
+public function update_manufacture(Request $request,$manufacture_id)
+    {
+         $data=array();
+         $data['manufacture_name']=$request->manufacture_name;
+         $data['manufacture_description']=$request->manufacture_description;
+        
+         DB::table('tbl_manufacture')
+             ->where('manufacture_id',$manufacture_id)
+             ->update($data);
+             Session::get('message','Manufacture update successfully !');
+             return Redirect::to('/all-manufacture');
+    }        
+
 
 }
