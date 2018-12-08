@@ -27,3 +27,6 @@ Route::get('/delete-category/{category_id}','CategoryController@delete_category'
 
 Route::get('/add-manufacture','ManufactureController@index');
 Route::post('/save-manufacture','ManufactureController@save_manufacture');
+Route::get('/all-manufacture','ManufactureController@all_manufacture');
+Route::get('/delete-manufacture/{manufacture_id}','ManufactureController@delete_manufacture');
+Route::get('/edit-manufacture/{manufacture_id}','ManufactureController@edit_manufacture');

@@ -11,11 +11,11 @@ class ManufactureController extends Controller
 {
     public function index()
     {
-    	return view('admin.add_manufacture');
+        return view('admin.add_manufacture');
     }
     public function save_manufacture(Request $request)
     {
-    	$data=array();
+        $data=array();
         $data['manufacture_id']=$request->manufacture_id;
         $data['manufacture_name']=$request->manufacture_name;
         $data['manufacture_description']=$request->manufacture_description;
@@ -23,6 +23,41 @@ class ManufactureController extends Controller
         DB::table('tbl_manufacture')->insert($data);
         Session::put('message','Manufacture added successfully !! ');
         return Redirect::to('/add-manufacture');
+    }
+
+ //show all brands   
+ public function all_manufacture()
+    {
+        
+       $all_manufacture_info=DB::table('tbl_manufacture')->get();
+       $manage_manufacture=view('admin.all_manufacture')
+           ->with('all_manufacture_info',$all_manufacture_info);
+       return view('admin_layout')
+           ->with('admin.all_manufacture',$manage_manufacture);    
+        //return view('admin.all_category');
+    }
+// Delete brands name from admin panel    
+public function delete_manufacture($manufacture_id)
+    {
+        DB::table('tbl_manufacture')
+            ->where('manufacture_id',$manufacture_id)
+            ->delete();
+        Session::get('message','manufacture Deleted successfully! ');
+        return Redirect::to('/all-manufacture');    
+    }
+
+//edit any brands infomartion    
+public function edit_manufacture($manufacture_id)
+    {
+         $manufacture_info=DB::table('tbl_manufacture')
+                         ->where('manufacture_id',$manufacture_id)
+                         ->first();
+       $manufacture_info=view('admin.edit_manufacture')
+           ->with('manufacture_info',$manufacture_info);
+       return view('admin_layout')
+           ->with('admin.edit_manufacture',$manufacture_info);
+     
+        //return view('admin.edit_category');
     }
 
 }
