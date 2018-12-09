@@ -12,12 +12,13 @@ class ProductController extends Controller
 {
     public function index()
     {
+        $this->AdminAuthCheck();
         return view('admin.add_product');
     }
    
     public function all_product()
    {
-    
+        $this->AdminAuthCheck();
        $all_product_info=DB::table('tbl_products')
                      ->join('tbl_category','tbl_products.category_id','=','tbl_category.category_id')
                      ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')
@@ -36,6 +37,7 @@ class ProductController extends Controller
 //save product from admin panel
      public function save_product(Request $request)
    {
+       $this->AdminAuthCheck();
       $data=array();
         $data['product_name']=$request->product_name;
         $data['category_id']=$request->category_id;
@@ -73,12 +75,24 @@ class ProductController extends Controller
     public function delete_product($product_id)
     {  
       
+      $this->AdminAuthCheck();
       DB::table('tbl_products')
           ->where('product_id',$product_id)
           ->delete();
       Session::get('message','Product Deleted successfully! ');
       return Redirect::to('/all-product');    
     }
+     public function AdminAuthCheck()
+    {
+      $admin_id=Session::get('admin_id');
+      
+      if ($admin_id) {
+         return;
+      }else{
+         return Redirect::to('/admin')->send();
+      }
+    }       
+
 }
 
 
