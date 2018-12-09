@@ -67,6 +67,18 @@ class ProductController extends Controller
             Session::put('message','product added successfully without image!!');
             return Redirect::to('/add-product');
    }
+
+//Delete product from admin panel
+
+    public function delete_product($product_id)
+    {  
+      
+      DB::table('tbl_products')
+          ->where('product_id',$product_id)
+          ->delete();
+      Session::get('message','Product Deleted successfully! ');
+      return Redirect::to('/all-product');    
+    }
 }
 
 
