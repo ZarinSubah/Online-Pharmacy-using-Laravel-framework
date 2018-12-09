@@ -35,4 +35,4 @@ Route::post('/update-manufacture/{manufacture_id}','ManufactureController@update
 //add-product from admin panel
 Route::get('/add-product','ProductController@index');
 Route::post('/save-product','productController@save_product');
-//Route::get('/all-product','ProductController@all_product');
+Route::get('/all-product','ProductController@all_product');
