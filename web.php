@@ -37,3 +37,7 @@ Route::get('/add-product','ProductController@index');
 Route::post('/save-product','productController@save_product');
 Route::get('/all-product','ProductController@all_product');
 Route::get('/delete-product/{product_id}','ProductController@delete_product');
+//add slider from admin panel
+Route::get('/add-slider','SliderController@index');
+Route::post('/save-slider','SliderController@save_slider');
+Route::get('/all-slider','SliderController@all_slider');
