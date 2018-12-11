@@ -82,6 +82,8 @@ class ProductController extends Controller
       Session::get('message','Product Deleted successfully! ');
       return Redirect::to('/all-product');    
     }
+
+// Security assurance for admin panel    
      public function AdminAuthCheck()
     {
       $admin_id=Session::get('admin_id');
