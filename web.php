@@ -13,6 +13,9 @@
 Route::get('/','HomeController@index');
 Route::get('/product_by_category/{category_id}','HomeController@show_product_by_category');//Show products by category
 Route::get('/product_by_manufacture/{manufacture_id}','HomeController@show_product_by_manufacture');// Show product by brands
+Route::get('/view_product/{product_id}','HomeController@product_details_by_id'); // Enters a new page to show details of the product clicked on
+
+
 //backend routes.......................
 Route::get('/admin','AdminController@index');
 Route::post('/admin-dashboard','AdminController@dashboard');
