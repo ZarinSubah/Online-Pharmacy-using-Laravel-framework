@@ -13,11 +13,27 @@ class HomeController extends Controller
                      ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')
                      ->select('tbl_products.*','tbl_category.category_name','tbl_manufacture.manufacture_name')
                      
-                     ->limit(9)
+                     ->limit(12)
                      ->get();
        $manage_published_product=view('pages.home_content')
                ->with('all_published_product',$all_published_product);
        return view('shop')
                ->with('pages.home_content',$manage_published_product); 
     }
+//show products bu category    
+     public function show_product_by_category($category_id)
+  {
+     $product_by_category=DB::table('tbl_products')
+                     ->join('tbl_category','tbl_products.category_id','=','tbl_category.category_id')
+                     ->select('tbl_products.*','tbl_category.category_name')
+                     ->where('tbl_category.category_id',$category_id)
+                     
+                     ->limit(18)
+                     ->get();
+       $manage_product_by_category=view('pages.category_by_products')
+               ->with('product_by_category',$product_by_category);
+       return view('shop')
+               ->with('pages.category_by_products',$manage_product_by_category); 
+ 
+  }
 }
