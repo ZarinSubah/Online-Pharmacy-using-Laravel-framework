@@ -12,6 +12,7 @@
 //frontend site...........
 Route::get('/','HomeController@index');
 Route::get('/product_by_category/{category_id}','HomeController@show_product_by_category');//Show products by category
+Route::get('/product_by_manufacture/{manufacture_id}','HomeController@show_product_by_manufacture');// Show product by brands
 //backend routes.......................
 Route::get('/admin','AdminController@index');
 Route::post('/admin-dashboard','AdminController@dashboard');
