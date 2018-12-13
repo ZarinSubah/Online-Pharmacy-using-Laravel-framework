@@ -14,10 +14,6 @@ Route::get('/','HomeController@index');
 Route::get('/product_by_category/{category_id}','HomeController@show_product_by_category');//Show products by category
 Route::get('/product_by_manufacture/{manufacture_id}','HomeController@show_product_by_manufacture');// Show product by brands
 Route::get('/view_product/{product_id}','HomeController@product_details_by_id'); // Enters a new page to show details of the product clicked on
- 
- //Cart related routes
-Route::post('/add-to-cart','CartController@add_to_cart');
-
 
 //backend routes.......................
 Route::get('/admin','AdminController@index');
@@ -49,3 +45,8 @@ Route::get('/delete-product/{product_id}','ProductController@delete_product');
 Route::get('/add-slider','SliderController@index');
 Route::post('/save-slider','SliderController@save_slider');
 Route::get('/all-slider','SliderController@all_slider');
+
+
+//Cart related routes
+Route::post('/add-to-cart','CartController@add_to_cart');
+Route::get('/show-cart','CartController@show_cart');
