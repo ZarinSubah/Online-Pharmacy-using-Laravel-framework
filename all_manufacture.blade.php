@@ -1,13 +1,6 @@
 @extends('admin_layout')
 @section('admin_content')
-<ul class="breadcrumb">
-			<li>
-				<i class="icon-home"></i>
-				<a href="index.html">Home</a> 
-				<i class="icon-angle-right"></i>
-			</li>
-			<li><a href="#">Tables</a></li>
-		</ul>
+
 		<p class="alert-success">
 			<?php
 			$message=Session::get('message');
