@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | f-Shopper</title>
+    <title>Online Pharmacy</title>
     <link href="{{asset('frontend/css/bootstrap.min.css'   )}}" rel="stylesheet">
     <link href="{{asset('frontend/css/font-awesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/prettyPhoto.css'     )}}" rel="stylesheet">
@@ -32,8 +32,8 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> 01711171644</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> pharmacy@domain.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -57,7 +57,8 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="{{URL::to('frontend/images/home/logo.png')}}" alt="" /></a>
+							<!--home logo-->
+							<a href="#"><img src="{{URL::to('frontend/images/home/logo.jpg')}}" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							
@@ -177,8 +178,8 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>e</span>-shopper</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+							<h2><span>Online</span>Pharmacy</h2>
+							<p>Online Pharmacy is a online based medicine delivery service. It's place where users can find or request any medicine they are looking for. Online service like this can help medicine shopping convenient for them.</p>
 						</div>
 					</div>
 					
@@ -187,12 +188,7 @@
 						
 						
 						
-					<div class="col-sm-3">
-						<div class="address">
-							<img src="{{URL::to('frontend/images/home/map.png')}}" alt="" />
-							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -212,18 +208,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Quock Shop</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">T-Shirt</a></li>
-								<li><a href="#">Mens</a></li>
-								<li><a href="#">Womens</a></li>
-								<li><a href="#">Gift Cards</a></li>
-								<li><a href="#">Shoes</a></li>
-							</ul>
-						</div>
-					</div>
+					
 					<div class="col-sm-2">
 						<div class="single-widget">
 							<h2>Policies</h2>
@@ -263,14 +248,7 @@
 			</div>
 		</div>
 		
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
-				</div>
-			</div>
-		</div>
+		
 		
 	</footer><!--/Footer-->
 	
