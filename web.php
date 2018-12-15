@@ -41,12 +41,17 @@ Route::get('/add-product','ProductController@index');
 Route::post('/save-product','productController@save_product');
 Route::get('/all-product','ProductController@all_product');
 Route::get('/delete-product/{product_id}','ProductController@delete_product');
-//add slider from admin panel
-Route::get('/add-slider','SliderController@index');
-Route::post('/save-slider','SliderController@save_slider');
-Route::get('/all-slider','SliderController@all_slider');
 
 
 //Cart related routes
 Route::post('/add-to-cart','CartController@add_to_cart');
 Route::get('/show-cart','CartController@show_cart');
+//Login for customer
+Route::post('/customer_login','CheckoutController@customer_login');
+Route::get('/customer_logout','CheckoutController@customer_logout');
+Route::get('/login-check','CheckoutController@login_check');
+Route::post('/customer_registration','CheckoutController@customer_registration');
+Route::get('/checkout','CheckoutController@checkout');
+Route::post('/save-shipping-details','CheckoutController@save_shipping_details');
+
+
