@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Facade;
 class CartController extends Controller
 {
-    public function add_to_cart(Request $request)
+    /*public function add_to_cart(Request $request)
     {
-    	$qty=$request->qty;
-    	$product_id=$request->product_id;
+      $qty=$request->qty;
+      $product_id=$request->product_id;
         $product_info=DB::table('tbl_products')
                       
                       ->first();
@@ -20,11 +20,11 @@ class CartController extends Controller
         $data['name']=$product_info->product_name;
         $data['price']=$product_info->product_price;
         $data['options']['image']=$product_info->product_image;
-        Cart::add($data);
+        //Cart::add($data);
         return Redirect::to('/show-cart');
                      
-    }
-    public function show_cart()
+    }*/
+    /*public function show_cart()
     {
        $all_published_category=DB::table('tbl_category')
                               
@@ -35,6 +35,10 @@ class CartController extends Controller
                ->with('pages.add_to_cart',$manage_published_category);                      
    
     }
-    
+    */
+    public function add_to_cart()
+    {
+      return view('pages.add_to_cart');
+    }
 
 }
