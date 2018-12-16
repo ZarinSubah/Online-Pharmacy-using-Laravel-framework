@@ -19,7 +19,7 @@
 								<input type="text" name="shipping_first_name"  placeholder="First Name *" required="">
 								<input type="text"  name="shipping_last_name" placeholder="Last Name *" required="">
 								<input type="text" name="shipping_address"  placeholder="Address *">
-								<input type="text" name="shipping_mobile_number"  placeholder="Mobile Number *" required="">
+								
                                 <input type="text" name="shipping_city"  placeholder="city *" required=""> 
                                 <input type="submit" class="btn btn-default" value="Done" required="">
 								</form>

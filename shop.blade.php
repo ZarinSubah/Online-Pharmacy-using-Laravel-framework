@@ -58,7 +58,7 @@
 					<div class="col-sm-4">
 						<div class="logo pull-left">
 							<!--home logo-->
-							<a href="#"><img src="{{URL::to('frontend/images/home/logo.jpg')}}" alt="" /></a>
+							<a href="/"><img src="{{URL::to('frontend/images/home/logo.jpg')}}" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							
@@ -69,9 +69,9 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="/checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="/login-check"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
 					</div>
@@ -93,13 +93,14 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html" class="active">Home</a></li>
-								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+								<li><a href="/" class="active">Home</a></li>
+								<li class="dropdown"><a href="#">Account<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                        
-										<li><a href="checkout.html">Checkout</a></li> 
-										<li><a href="cart.html">Cart</a></li> 
-										<li><a href="login.html">Login</a></li> 
+										
+										<li><a href="/login-check">Login</a></li>
+										<li><a href="/customer_logout">Logout</a></li> 
+										 
                                     </ul>
                                 </li> 
 								
@@ -223,7 +224,7 @@
 					</div>
 					<div class="col-sm-2">
 						<div class="single-widget">
-							<h2>About Shopper</h2>
+							<h2>About Pharmacy</h2>
 							<ul class="nav nav-pills nav-stacked">
 								<li><a href="#">Company Information</a></li>
 								<li><a href="#">Careers</a></li>
@@ -235,7 +236,7 @@
 					</div>
 					<div class="col-sm-3 col-sm-offset-1">
 						<div class="single-widget">
-							<h2>About Shopper</h2>
+							<h2>About Pharmacy</h2>
 							<form action="#" class="searchform">
 								<input type="text" placeholder="Your email address" />
 								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>

@@ -16,14 +16,9 @@
 							<input type="email" required="" placeholder="Email" name="customer_email" />
 							<input type="password" placeholder="Passwords" name="password" />
 							<button type="submit" class="btn btn-default">Login</button>
-							
-							<div class="col-sm-2">
-					       <h2 class="or">OR</h2>
-					       <button type="submit" class="btn btn-default">Login With Google</button>
-				           </div>
+					
 
-
-						</form>
+				       </form>
 					</div><!--/login form-->
 				</div>
 				<div class="col-sm-1">
